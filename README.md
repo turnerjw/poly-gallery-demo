@@ -6,4 +6,4 @@ Transitions between images are animated using react-spring (https://github.com/d
 
 Click on the image to animate it.
 
-![](poly-gallery-demo.gif)
+![](demo.gif)
