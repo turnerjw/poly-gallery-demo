@@ -8,7 +8,7 @@ const data = [{ name: "bulb1", image: bulb1 }, { name: "bulb2", image: bulb2 }];
 const Box = styled.div`
     width: 250px;
     height: 250px;
-    background: white;
+    background: black;
 `;
 
 class Bulb extends React.Component {
