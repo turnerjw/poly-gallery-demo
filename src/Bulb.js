@@ -1,13 +1,17 @@
 import React from "react";
 import { Spring, animated } from "react-spring";
 import styled from "styled-components";
-import { bulb1, bulb2 } from "./data";
+import { bulbasaur, ivysaur, venusaur } from "./data";
 
-const data = [{ name: "bulb1", image: bulb1 }, { name: "bulb2", image: bulb2 }];
+const data = [
+    { name: "Bulbasaur", image: bulbasaur },
+    { name: "Ivysaur", image: ivysaur },
+    { name: "Venusaur", image: venusaur }
+];
 
 const Box = styled.div`
-    width: 250px;
-    height: 250px;
+    width: 50%;
+    height: 50%;
     background: black;
 `;
 
@@ -19,20 +23,20 @@ class Bulb extends React.Component {
         };
     }
 
-    toggleSelected = () => {
+    evolve = () => {
         const { selected } = this.state;
         this.setState({
-            selected: 1 - selected
+            selected: (selected + 1) % 3
         });
     };
 
     render() {
         const { selected } = this.state;
-        const bulb = data[selected].image;
+        const pokemon = data[selected];
         return (
-            <Box onClick={this.toggleSelected}>
-                <svg viewBox="0 0 256 256">
-                    {bulb.map((p, i) => (
+            <Box onClick={this.evolve}>
+                <svg viewBox="0 0 250 250">
+                    {pokemon.image.map((p, i) => (
                         <Spring key={i} native to={p}>
                             {styles => (
                                 <animated.path
