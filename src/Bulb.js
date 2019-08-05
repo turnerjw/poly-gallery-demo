@@ -10,8 +10,7 @@ const data = [
 ];
 
 const Box = styled.div`
-    width: 50%;
-    height: 50%;
+    width: min(75vh, 75vw);
     background: black;
 `;
 
