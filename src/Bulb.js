@@ -10,7 +10,8 @@ const data = [
 ];
 
 const Box = styled.div`
-    width: min(75vh, 75vw);
+    max-width: 350px;
+    width: 100%;
     background: black;
 `;
 
